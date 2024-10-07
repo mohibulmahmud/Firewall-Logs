@@ -6,6 +6,14 @@ https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-firewa
 
 This lab provides step-by-step instructions on how to collect Windows Firewall logs using Azure services, including creating a Windows VM, setting up Log Analytics, and configuring data collection.
 
+[Install Azure CLI on Windows](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli)
+
+
+**az login** 
+
+**az account show --query "name"**
+
+
 ## Step 1: Create a Resource Group
 
 First, create a resource group to organize all the resources needed for this lab.
@@ -45,6 +53,9 @@ az vm create ^
 
 After creating the VM, configure Windows Firewall logging.
 
+[Verify that Firewall Logs are Being Created](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-firewall-logs#verify-that-firewall-logs-are-being-created)
+
+
 ```cmd
 :: Enable logging for allowed and dropped connections
 netsh advfirewall set allprofiles logging allowedconnections enable
@@ -77,14 +88,9 @@ az monitor log-analytics workspace create ^
   --location %location%
 ```
 
-## Step 4: Connect the VM to Log Analytics Workspace
+## Step 4: Add Firewall table to Log Analytics Workspace
 
-Link the VM to the Log Analytics Workspace to start collecting data.
-
-```cmd
-"Firewall Table" for Log Analytics
-
-```
+[Add Firewall Table to Log Analytics Workspace](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-firewall-logs#add-firewall-table-to-log-analytics-workspace)
 
 
 
@@ -107,7 +113,8 @@ az monitor data-collection endpoint create ^
 
 ## Step 6: Create Data Collection Rule (DCR)
 
-Create a Data Collection Rule to specify how to handle firewall logs.
+
+[Create a Data Collection Rule to Collect Firewall Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-firewall-logs#create-a-data-collection-rule-to-collect-firewall-logs)
 
 
 
