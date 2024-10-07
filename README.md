@@ -1,5 +1,9 @@
 # Collecting Windows Firewall Logs with Azure AMA
 
+**Collect firewall logs with Azure Monitor Agent.**
+
+https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-firewall-logs
+
 This lab provides step-by-step instructions on how to collect Windows Firewall logs using Azure services, including creating a Windows VM, setting up Log Analytics, and configuring data collection.
 
 ## Step 1: Create a Resource Group
