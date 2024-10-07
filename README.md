@@ -122,6 +122,9 @@ az monitor data-collection endpoint create ^
 
 To verify if firewall logs are being ingested, query the "WindowsFirewall" table in Log Analytics.
 
+[Sample Log Queries for Firewall Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/agents/data-sources-firewall-logs#sample-log-queries)
+
+
 ```kql
 WindowsFirewall
 | take 10
